@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Select Resume Template</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="page-header">
+    <div class="brand-badge">✦</div>
+    <h1 class="title">Free Resume Builder</h1>
+    <p class="subtitle">Create a resume!</p>
+  </header>
+
+  <main class="page-content">
+    <section class="hero-card">
+      <h2 class="section-title">Choose Your Resume Template</h2>
+      <div class="template-grid">
+        <div class="template-card" onclick="selectTemplate('template1')">
+          <img src="/contains/temp1-pv.png" alt="Template 1">
+          <p>Professional Resume</p>
+        </div>
+
+        <div class="template-card" onclick="selectTemplate('template2')">
+          <img src="/contains/temp2-pv.png" alt="Template 2">
+          <p>Modern Resume</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    function selectTemplate(templateName) {
+      localStorage.setItem('selectedTemplate', templateName);
+      window.location.href = 'form.html';
+    }
+  </script>
+</body>
+</html>
