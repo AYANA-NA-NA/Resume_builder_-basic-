@@ -1,5 +1,5 @@
 function generateResume() {
-  const template = localStorage.getItem('selectedTemplate') || 'template1';
+  const template = localStorage.getItem('selectedTemplate') || 'temp1';
 
   fetch(`/templates/${template}.html`)
     .then(res => res.text())
